@@ -1,0 +1,26 @@
+{% extends 'layouts/application.html' %}{% block bodyClass %}class="home-page"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %}
+<section class="banner">
+    <img class="w-100" src="images/imm-tran-van-tinh-banner.png" alt="banner"> 
+</section>
+<section class="main-wrap py-4 py-lg-5">
+    <div class="container">
+        <!-- Group link 01 -->
+        {% include "modules/component/link-group01.html" %}
+        <!-- End  -->
+        <!-- Group link 02  -->
+        {% include "modules/component/link-group02.html" %}
+        <!-- End  -->
+        <div class="blog__wrap pt-4 pt-lg-5">
+            <div class="row">
+                <div class="col-md-8">
+                    {% include "modules/component/list-news.html" %}
+                </div>
+                <div class="col-md-4">
+                    {% include "modules/component/sidebar-news.html" %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+{% endblock %}

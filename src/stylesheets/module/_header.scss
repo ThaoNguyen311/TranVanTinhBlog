@@ -1,0 +1,138 @@
+.header{
+    background-color: $header-background;
+    color:$header-text;
+    a{
+        color:$header-text;
+    }
+    &__logo{
+        font-family: 'commerceB';
+        font-size: rem(30);
+    }
+    &__search{
+        background-color: $gray-400;
+        border-radius: rem(20);
+        overflow: hidden;
+        position: relative;
+        &-input{
+            background-color: transparent;
+            text-align: center;
+            color:$white;
+            height: auto;
+            border: 0;
+            &.form-control{
+                width:100%;
+            }
+            @include placeholder{
+                color: $white;
+                font-weight: $font-weight-light;
+            }
+            &:focus{
+                background-color: $white;
+                color:$header-text;
+                box-shadow: none;
+                border-color: $gray-400;
+                border-radius: rem(20);
+            }
+        }
+        &-submit{
+            position: absolute;
+            top: 3px;
+            left: 0;
+            border: 0;
+            background-color: transparent;
+            color: white;
+            transform: scaleX(-1);
+            padding: 0;
+            height: 100%;
+            width: rem(40);
+        }
+    }
+    // Menu 
+    .navbar-light .navbar-toggler{
+        border:none
+    }
+    &__menu{
+        position: relative;
+        .icon_menu{
+            &:before{
+                font-size: 3rem;
+            }
+            @include hover-focus-active{
+                color:$primary;
+            }
+        }
+    }
+    &__dropdown-menu{
+        position: absolute;
+        left:0;
+        top:120%;
+        min-width: rem(300);
+        box-shadow: 0 1px 3px #e1e1e1;
+        border:1px solid $menu-border-color;
+        background-color: $menu-bg;
+        li{
+            border-bottom: 1px solid $menu-border-color;
+            &.parent {
+                position: relative;
+                > a:after{
+                    @include icon-font('\35', 1.8rem);
+                    position: absolute;
+                    right:1rem;
+                    top:calc((100% - 1.7rem)/2);
+                }
+                ul{
+                    position: absolute;
+                    top:-1px;
+                    left:100%;
+                    min-width: rem(300);
+                    box-shadow: 0 1px 3px #e1e1e1;
+                    border:1px solid $menu-border-color;
+                    display: none;
+                    visibility: hidden;
+                    background-color: $menu-bg;
+                }
+                &:hover ul{
+                    display: block;
+                    visibility: visible
+                }
+            }
+        }
+        a.nav-link{
+            font-weight: 700;
+            font-size: 1.25rem;
+            color:$header-text;
+            padding: $navbar-padding-y $navbar-padding-x;
+            @include transition;
+            position: relative;
+            &:hover{
+                color:$menu-color-hover;
+                background-color: $menu-bg-hover;
+                &:after{
+                    color:$menu-color-hover
+                }
+            }
+        }
+    }
+}
+@include media-breakpoint-down(sm) {
+    .header{
+        &__right {
+        width:100%;
+        }
+        &__search{
+            width:100%
+        }
+        .switch-language{
+            position: absolute;
+            top:rem(15);
+            right:0
+        }
+        .navbar{
+            padding:0
+        }
+        .navbar-brand{
+            padding-top:0;
+            padding-bottom:0;
+        }
+    }
+}

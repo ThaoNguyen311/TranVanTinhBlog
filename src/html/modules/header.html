@@ -1,0 +1,75 @@
+<header id="header" data-module="header" class="header py-3">
+    <div class="container">
+        <nav class="navbar p-0">
+            <div class="header__left d-flex align-items-center">
+                <!-- Toggler/collapsibe Button -->
+                <div class="header__menu">
+                    <button class="navbar-toggler p-0" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                        <span class="icon_menu"></span>
+                    </button>
+                    <!-- Navbar links -->
+                    <div class="collapse navbar-collapse header__dropdown-menu" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item level0 parent">
+                                <a class="nav-link" href="#">Link</a>
+                                <ul class="navbar-nav">
+                                    <li><a class="nav-link" href="#">Link 1</a></li>
+                                    <li><a class="nav-link" href="#">Link 1</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item level0">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                            <li class="nav-item level0">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Brand -->
+                <a class="navbar-brand header__logo text-uppercase mr-0 ml-md-5 ml-0 ml-sm-3" href="index.html">Trần Văn Tỉnh</a>    
+                
+            </div>
+            <div class="header__right d-flex align-items-center">
+                <!-- Search  -->
+                <div class="header__search bg-gray">
+                    <form class="form-inline" action="">
+                        <input class="form-control header__search-input" type="text" placeholder="Tìm kiếm">
+                        <button class="header__search-submit" type="submit"><span class="header__icon icon_search"></span></button>
+                    </form>
+                </div>                
+                <!-- Language -->
+                <div class="switch-language ml-3 d-none d-md-inline-block">
+                    <ul class="header__language-switch d-flex">
+                        <li> 
+                            <a href="javascript:void(0);">                    
+                                <span><strong>Tiếng Việt</strong></span>
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="javascript:void(0);">                        
+                                <span>English</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>  
+                <!-- Responsive -->
+                <div class="switch-language d-md-none">
+                    <ul class="header__language-switch d-flex">
+                        <li> 
+                            <a href="javascript:void(0);">                    
+                                <span><strong>VI</strong></span>
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="javascript:void(0);">                        
+                                <span>EN</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>              
+            </div>            
+        </nav>
+    </div>
+</header>
